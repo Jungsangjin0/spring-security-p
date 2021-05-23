@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+
+#wrap{width: 100%;}
+
+.full-border{ 
+    border-bottom: 1px solid #d2d2d2;
+    position: relative;
+    top: 67px;
+}
+header{ width: 1032px; height: 67px; margin: 0 auto; display: flex;  overflow: hidden;}
+header h1 {display: inline-block; line-height: 67px;}
+header h1 > img{width: 50px; vertical-align: middle; margin:17px 0 0 0;}
+header nav{ display: inline-block; width: 400px; line-height: 67px; font-size:16px; font-weight: 500;}
+header nav ul{width: 400px; overflow: hidden; text-align: center;}
+header nav ul li{width:33.3%; float: left;}
+header>div{display: inline-flex; line-height: 67px; margin-left: auto;}
+header>div>i.fa-search{cursor: pointer; line-height: 67px;width: 40px;text-align: center;font-size: 1.2rem;color: #686868;}
+header div.search-div{
+    position: absolute;
+    z-index: 99;
+    width: 320px;
+    height: 300px;
+    background: #fff;
+    top: 67px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 3px 3px 0px #a5a5a59e;
+    line-height: 30px;
+    display:none;
+}
+header div.search-div .search-input{    
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #d2d2d2;
+    color: #989898;
+}
+header div.search-div .fa-times{
+    position: absolute;
+    right: 19px;
+    top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+header div.search-div .popular-search{
+    padding: 10px 20px;
+    color: #686868;
+    font-weight: 500;
+}
+header>div ul.search{padding: 0 20px; color:#989898;}
+header>div ul.search li{display: inline-flex; height: 30px; line-height: 30px; width: 100%;}
+header>div ul.search li .i-popu-search{line-height: 30px;}
+header>div ul.search li p{padding: 0 10px;}
+
+header>div button{
+    cursor: pointer;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #D2D2D2;
+    border-radius: 6px;
+    width: 140px;
+    text-align: center;
+    margin: 12px;
+    color: #686868;
+}
+header>div ul.login{display: inline-flex;}
+header>div ul.login li{cursor: pointer; padding: 0 10px;}
+
+
+
+
+
+
+/* footer-ad*/
+.f-ad{z-index: 1; background:#EDEDED; width: 100%; height: 110px; text-align: center; }
+.f-ad h5{font-size:28px; height: 60px; line-height: 80px; color: #5A5A5A; font-weight: 500;}
+.f-ad p{font-size: 16px ; color: #5A5A5A; }
+/* footer */
+footer{position: relative;width: 1032px;height: 220px; margin: 0 auto;padding: 30px 0;box-sizing: border-box;vertical-align: middle;display: flex;} 
+footer h2{width: 55px; }
+footer h2 img{width: 100%;}
+footer div.f-left{width: 19%;line-height: 30px;font-size: 14px;}
+footer div.f-left a{color:#989898; }
+footer div.f-right{width: 80%; margin-left: auto;}
+footer div.b-right{text-align: right;}
+footer div button{width: 160px;height: 40px;background: #fff;color: #686868;border:1px solid #c4c4c4;border-radius: 4px;font-size: 16px;right: 0;cursor: pointer;}
+footer div button:hover{color:#c4c4c4;}
+footer div p{margin: 20px 0; line-height: 24px; color: #989898; font-size: 14px;}
+footer div span.addr{ color: #989898;}
+
+
+

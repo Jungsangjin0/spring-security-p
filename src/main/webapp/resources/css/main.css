@@ -1,0 +1,49 @@
+
+
+section{width: 1032px; margin:0 auto;}
+
+article.banner{}
+article.banner ul{ width: 100%;}
+article.banner ul li{height: 383px; display: flex;}
+article.banner ul li img{width:680px; height: 383px; background-color: #949494;}
+article.banner ul li div{margin-left: auto; width:352px; height: 100%; background-color: #dddddd; padding:110px 15px; box-sizing: border-box;}
+article.banner ul li div p.banner-title{font-size: 28px; font-weight: 500;}
+article.banner ul li div p{margin-top: 10px;}
+
+/* 주목할 만한 프로젝트 (4개 list)*/
+article.first-pj{display: flex; }
+article h3{font-size:24px;}
+div.a-left{width: 70%; display:inline-block; }
+ul.pj-4-list{display: inline-flex; width: 100%;}
+ul.pj-4-list li{width:100%; margin-right:10px; line-height: 24px;}
+ul.pj-3-list li:nth-of-type(3){margin-right: 0;}
+ul.pj-4-list li div{ height: 180px; background-color: #d1d1d1; border-radius: 6px;}
+ul.pj-4-list li div>img{width: 100%;}
+ul.pj-4-list li span{ font-size:12px; color: #989898;}
+ul.pj-4-list li p{font-size: 17px; color: #5a5a5a; font-weight: 600; }
+ul.pj-4-list li p.goals{font-size: 12px; color: #FF4117;}
+
+
+
+/* 창작자 랭킹 */
+div.a-right{ width: 30%; box-sizing: border-box; padding-left: 30px; display:inline-block; margin-left: auto;}
+ul.rank{}
+ul.rank li{display: inline-flex; line-height: 35px;}
+ul.rank span{font-size: 28px; color: #FF6161; padding: 0 20px;}
+ul.rank div{width: 35px; height:35px; background-color: #D2D2D2; border-radius: 50%;}
+ul.rank img{width: 100%; vertical-align: middle;}
+ul.rank p{padding-left: 10px; font-size: 15px; color:#5a5a5a}
+
+/* 광고 */
+article.ad-bandi{margin:60px 0; background-color: bisque; text-align: center; height:110px; line-height: 110px;}
+article.ad-bandi p{font-size: 24px; font-weight: 600;}
+
+
+/* 공개예정 프로젝트 (4)*/
+ul.pj-4-list li:nth-of-type(4){margin-right: 0;}
+ul.pj-4-list li p.notice{font-size: 13px; color: #FF4117;}
+div.button-div{text-align: center;}
+button.open-pj{cursor: pointer; background: #fff; border:1px solid #D2D2D2; font-size:18px; color:#686868; width: 240px; height:40px; border-radius:30px; text-align: center;}
+button.open-pj:hover{color: #d2d2d2;}
+
+
