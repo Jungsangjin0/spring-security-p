@@ -1,0 +1,15 @@
+diff a/src/main/webapp/WEB-INF/views/project/test.jsp b/src/main/webapp/WEB-INF/views/project/test.jsp	(rejected hunks)
+@@ -0,0 +1,12 @@
++<%@ page language="java" contentType="text/html; charset=UTF-8"
++    pageEncoding="UTF-8"%>
++<!DOCTYPE html>
++<html>
++<head>
++<meta charset="UTF-8">
++<title>Insert title here</title>
++</head>
++<body>
++test
++</body>
++</html>
+\ No newline at end of file

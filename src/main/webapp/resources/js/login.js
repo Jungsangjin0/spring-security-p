@@ -8,7 +8,7 @@ $(function(){
 		})
 		
 		$("#login>li:last").on("click", function(){
-			location.href="logout"
+			$("#logoutForm").submit();
 		})
 		
 	})
