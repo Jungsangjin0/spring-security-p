@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
+<div class="full-border"></div>
 <header>
             <h1><img src="${pageContext.servletContext.contextPath }/resources/image/logo.png" alt="logo"></h1>
             <nav>
@@ -31,6 +32,7 @@
                 <ul class="login">
                     <li>로그인</li>
                     <li>회원가입</li>
+                    <li>로그아웃</li>
                 </ul>
             
             </div>

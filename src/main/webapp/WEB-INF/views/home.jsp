@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/reset.css" type="text/css">
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/common/header.css" type="text/css">
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/main.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="${pageContext.servletContext.contextPath }/resources/js/login.js"></script>
 </head>
 <body>
     <div id="wrap">
-        <div class="full-border"></div>
         
         <jsp:include page="common/header.jsp"></jsp:include>
 
@@ -125,5 +126,8 @@
 
     </div>
 
+</script>
+
 </body>
 </html>
+
