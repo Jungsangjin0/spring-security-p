@@ -4,9 +4,11 @@ $(function(){
 		})
 		
 		$(".login>li:last").on("click", function(){
-			location.href="logout"
-		})
-		$(".login>li").eq(1).on("click", function(){
 			location.href="register"
 		})
+		
+		$("#login>li:last").on("click", function(){
+			location.href="logout"
+		})
+		
 	})

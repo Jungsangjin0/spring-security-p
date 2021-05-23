@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="s"  uri="http://www.springframework.org/security/tags"%>
 
 <div class="full-border"></div>
 <header>
@@ -29,11 +30,19 @@
                     </ul>
                 </div>
                 <button>프로젝트 오픈 신청</button> 
-                <ul class="login">
-                    <li>로그인</li>
-                    <li>회원가입</li>
-                    <li>로그아웃</li>
-                </ul>
+                <s:authorize access="isAnonymous()">
+    	            <ul class="login">
+	                    <li>로그인</li>
+        	            <li>회원가입</li>
+            	    </ul>
+                </s:authorize>
+    	            
+                 <s:authorize access=" isAuthenticated()">
+    	            <ul class="login" id="login">
+        	            <li>${requestScope.id }</li>
+        	            <li>로그아웃</li>
+            	    </ul>
+                </s:authorize>
             
             </div>
         </header>
