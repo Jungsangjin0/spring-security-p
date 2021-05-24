@@ -3,9 +3,20 @@
 <%@ taglib prefix="s"  uri="http://www.springframework.org/security/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+const LOAD = "${pageContext.servletContext.contextPath }";
+console.log(LOAD);
+</script>
+<script src="${pageContext.servletContext.contextPath }/resources/js/login.js?ver=1"></script>
+<style>
+	h1 > img {
+		cursor : pointer;
+	}
+</style>
 <div class="full-border"></div>
 <header>
-            <h1><img src="${pageContext.servletContext.contextPath }/resources/image/logo.png" alt="logo"></h1>
+            <h1><img src="${pageContext.servletContext.contextPath }/resources/image/logo.png" alt="logo" class="logo"></h1>
             <nav>
                 <ul>
                     <li><a href="#">프로젝트</a></li>
@@ -40,14 +51,14 @@
                 </s:authorize>
                 
                 <s:authorize access="isAnonymous()">
-    	            <ul class="login">
+    	            <ul class="login" id="login">
 	                    <li>로그인</li>
         	            <li>회원가입</li>
             	    </ul>
                 </s:authorize>
     	            
                  <s:authorize access=" isAuthenticated()">
-    	            <ul class="login" id="login">
+    	            <ul class="login" id="logout">
         	            <li>${requestScope.id }</li>
         	            <li>로그아웃</li>
             	    </ul>

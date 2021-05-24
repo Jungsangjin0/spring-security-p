@@ -10,15 +10,12 @@
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/common/header.css" type="text/css">
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/main.css" type="text/css">
     <title>로그인</title>
-</head>
-<body>
-<jsp:include page="../common/header.jsp"/>
-<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<jsp:include page="../common/header.jsp"/>
 <body>
     <div style="width: 400px; padding:72px 0px 0px; margin: 0px auto 12px; text-align: center;" >
         <div style="padding: 32px; border-radius: 5px; border: 1px solid rgb(228, 228, 228); text-align: center; font-size: 14px; line-height: 1.7em; color: rgba(0, 0, 0, 87);">
@@ -53,7 +50,7 @@
             <div style="font-size : 13px; line-height: 20px; letter-spacing: -0.015em; margin : 20px 0px 0px; display: flex; justify-content: center; color: rgb(109, 109, 109);">
                 잔디에 계정이 없으신가요?
                 <span style="margin: 0px 0px 0px 4px; cursor: pointer; font-weight: normal;" >
-                    <a href="#"style="color:rgb(39, 163, 255);text-decoration: underline;">가입하기</a>
+                    <a href="${pageContext.servletContext.contextPath }/join"style="color:rgb(39, 163, 255);text-decoration: underline;">가입하기</a>
                 </span>
             </div>
             <div style="overflow: hidden; text-align: center; padding: 20px 0px; position: relative; box-sizing: inherit; line-height: 1.7em; color: rgba(0, 0, 0, 87);"></div>
@@ -62,7 +59,5 @@
             </span>
         </div>
     </div>
-</body>
-</html>
 </body>
 </html>

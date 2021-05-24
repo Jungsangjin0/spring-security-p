@@ -1,14 +1,12 @@
 $(function(){
-		$(".login>li:first").on("click", function(){
+		$("#login > li").on("click", function(){
 			location.href="login";
 		})
-		
-		$(".login>li:last").on("click", function(){
-			location.href="register"
-		})
-		
-		$("#login>li:last").on("click", function(){
+		$("#logout > li:last").on("click", function(){
 			$("#logoutForm").submit();
+		})
+		$("h1 > img").on("click", function(){
+			location.href= LOAD;
 		})
 		
 	})
