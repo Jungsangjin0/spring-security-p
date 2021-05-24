@@ -17,6 +17,7 @@
 		
 		<s:intercept-url pattern="/login" access="isAnonymous()" />
 		<s:intercept-url pattern="/register" access="isAnonymous()" />
+		<s:intercept-url pattern="/join" access="isAnonymous()" />
 		
 		<!-- 정적 리소스는 모두 접근 허용 -->
 		<!-- 로그인된 상태에서는 로그인이나 회원가입 화면에 접근 못하도록 함 -->
