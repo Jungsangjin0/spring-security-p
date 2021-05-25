@@ -9,6 +9,8 @@ const LOAD = "${pageContext.servletContext.contextPath }";
 console.log(LOAD);
 </script>
 <script src="${pageContext.servletContext.contextPath }/resources/js/login.js?ver=1"></script>
+<script src="${pageContext.servletContext.contextPath }/resources/js/header.js"></script>
+<link rel="stylesheet" property="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/common/header.css">
 <style>
 	h1 > img {
 		cursor : pointer;
@@ -24,7 +26,7 @@ console.log(LOAD);
                     <li><a href="#">예정프로젝트</a></li>
                 </ul>
             </nav>
-            <div > <!-- 검색, 프로젝트신텅 버튼, 로그인 회원가입-->
+            <div class="right-h-menu"> <!-- 검색, 프로젝트신텅 버튼, 로그인 회원가입-->
                 <i class="fas fa-search"></i>
                 <div class="search-div">
                     <input type="text" class="search-input" value="검색어를 입력해주세요.">
@@ -59,9 +61,19 @@ console.log(LOAD);
     	            
                  <s:authorize access=" isAuthenticated()">
     	            <ul class="login" id="logout">
-        	            <li>${requestScope.id }</li>
+        	            <li class="myPage-menu">${requestScope.id }</li>
         	            <li>로그아웃</li>
             	    </ul>
+            	    <ul class="hide-user-info">
+	                    <li><a href="#">내정보</a></li>
+	                    <li><a href="#">알림</a></li>
+	                    <li><a href="#">팔로우</a></li>
+	                    <li><a href="#">문의내역</a></li>
+	                    <li><a href="#">후원현황</a></li>
+	                    <li><a href="#">좋아한 프로젝트</a></li>
+	                    <li><a href="#">내가 만든 프로젝트</a></li>
+	                    <li><a href="#">설정</a></li>
+                	</ul>
             	    <c:url var="logoutUrl" value="logout"/>
             	    <form id="logoutForm" action="${logoutUrl }" method="POST">
             	    	<s:csrfInput/>
