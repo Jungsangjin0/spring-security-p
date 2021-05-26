@@ -7,7 +7,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/reset.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/common/header.css" type="text/css">
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/main.css" type="text/css">
     <title>로그인</title>
     <meta charset="UTF-8">
@@ -26,12 +25,12 @@
                 <div style="text-align: left; margin : 0px 0px 23px; word-break: break-all; font-size: 14px; line-height: 1.7em; color: rgba(0, 0, 0, 87);">
                     <div style="width:auto; margin: 0px 0px 12px; word-break: break-all;">
                         <span style="border: 1px solid rgb(230, 230, 230); color: rgb(13, 13, 13); background: rgb(255, 255, 255); padding: 0px 12px; max-height: 44px; min-width: 100px; display: flex; font-size: 14px; line-height: 24px; letter-spacing: -0.015em; align-items: center; border-radius: 4px;">
-                            <input name="userId" type="text" placeholder="이메일 주소 입력" autocomplete="email" autocapitalize="off" style="padding:13px 0px; width: 100%; background: transparent; border: 0px; box-sizing: border-box; height: 100%; outline: none; margin: 0px; line-height: normal; color: inherit; font: inherit;">
+                            <input name="userId" type="text" placeholder="이메일 주소 입력" autocomplete="off" autocapitalize="off" style="padding:13px 0px; width: 100%; background: transparent; border: 0px; box-sizing: border-box; height: 100%; outline: none; margin: 0px; line-height: normal; color: inherit; font: inherit;">
                         </span>
                     </div>
                     <div style="margin: 0px; width: auto; word-break: break-all; text-align: left;">
                         <span style="border: 1px solid rgb(230, 230, 230); color : rgb(13, 13, 13); background: rgb(255, 255, 255); padding: 0px 12px; min-width: 100px; display: flex; font-size: 14px; line-height: 24px; letter-spacing: -0.015em; align-items: center; border-radius: 4px; text-align: left;">
-                            <input type="password" name="userPw" placeholder="비밀번호 입력" autocomplete="current-password" autocapitalize="off" style="padding: 13px 0px; width: 100%; border: 0px; box-sizing: border-box; height: 100%; outline: none; margin: 0px; appearance: none; line-height: normal; color: inherit;">
+                            <input type="password" name="userPw" placeholder="비밀번호 입력" autocomplete="off" autocapitalize="off" style="padding: 13px 0px; width: 100%; border: 0px; box-sizing: border-box; height: 100%; outline: none; margin: 0px; appearance: none; line-height: normal; color: inherit;">
                         </span>
                     </div>
                 </div>

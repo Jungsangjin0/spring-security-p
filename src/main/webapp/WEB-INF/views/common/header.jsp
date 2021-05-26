@@ -10,7 +10,9 @@ console.log(LOAD);
 </script>
 <script src="${pageContext.servletContext.contextPath }/resources/js/login.js?ver=1"></script>
 <script src="${pageContext.servletContext.contextPath }/resources/js/header.js"></script>
+<link rel="stylesheet" property="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" property="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/common/header.css">
+<link rel="stylesheet" property="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/reset.css" type="text/css">
 <style>
 	h1 > img {
 		cursor : pointer;
