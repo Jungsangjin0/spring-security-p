@@ -11,7 +11,7 @@
 <body>
     <div id="wrap">
         <!-- header -->
-        <jsp:include page="../common/header.jsp"></jsp:include>
+        <jsp:include page="../../common/header.jsp"></jsp:include>
 
 	<!-- main contents -->
     <!-- project create page-->
@@ -178,7 +178,7 @@
 	
 
 	   <!-- footer -->
-       <jsp:include page="../common/footer.jsp"></jsp:include>
+       <jsp:include page="../../common/footer.jsp"></jsp:include>
     </div>
 
 
