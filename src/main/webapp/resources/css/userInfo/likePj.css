@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.full-border{width: 100%; border-bottom: 1px solid #d2d2d2; position: relative; top:124px}
+
+article.page-title{height: 124px;}
+article.page-title h2{ font-size: 36px; line-height: 124px;}
+
+article.like-pj-list{font-size: 16px;  }
+article.like-pj-list .pj-select{position:relative; display: flex; height: 70px; line-height: 70px; align-items: center;}
+article.like-pj-list .pj-select p{font-size: 16px; width: 50%; }
+article.like-pj-list .pj-select em{color: #ff6161;  }
+article.like-pj-list .select-body{line-height: 50px; padding: 0 25px 0 15px; box-sizing: border-box; align-items: center;   margin-left: auto; font-size: 22px; font-weight: 500; color: #353535;}
+article.like-pj-list .fa-caret-down{position: relative; left:10px;}
+article.like-pj-list ul.select{display: none; background: #fff; position: absolute; top: 60px; right: 0; width: 100px; text-align: center; box-shadow: 0px 1px 4px 1px #d2d2d2; border-radius: 6px;; }
+article.like-pj-list ul.select li{line-height: 55px; color: #686868;}
+
+/* hide and show */
+article.like-pj-list ul.select-show{display: block;}
+
+
+
+/* pick 아이콘 */
+span.pick{
+    background: #ff6161; 
+    padding: 2px 20px 5px 10px; 
+    font-size: 0.9em; color: #fff; 
+    box-sizing: content-box;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    top: 40px;
+    left: -8px;
+}
+/* span.pick::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    right:-20px;
+    width: 30px;
+    height: 30px;
+    transform: scale(0.8) rotate(45deg);
+    z-index: 1;
+    background: #fff;
+} */
+
+
+
+/* 하트 버튼 */
+button.like{}
+button.like::before{}
+button.like::after{}
+
+
+/* 3개들어가는 pj (이름 못바꿨ㄷ,*/
+ul.pj3-list{display: flex; width: 100%; justify-content: flex-start;  flex-wrap: wrap;}
+ul.pj3-list li{margin-right: 2%; flex-basis: 32%; }
+ul.pj3-list li:nth-child(3n){margin-right: 0;}
+ul.pj3-list div.pj3-img{width: 100%; height: 240px; background: #ddd; overflow: hidden; border-radius: 5px;}
+ul.pj3-list div.pj3-img>img{width: 100%;}
+ul.pj3-list h3{font-size: 24px; font-weight: 500; color: #353535;}
+ul.pj3-list span.pj3-cate{font-size:14px; color: #989898; display: inline-block; margin: 10px 0;}
+ul.pj3-list p{line-height: 1.5em; color: #646464; font-weight: 300; margin-bottom:25px;}
+ul.pj3-list div.progress_bar{height: 2px; background: #d2d2d2; overflow: hidden;}
+ul.pj3-list div.progress_bar::after{
+    content: "";
+    width: 70%; /* 자바스크립트로 값 가져와서 바꿔주기 */
+    display: block;
+    height: 100%;
+    background: #ff6161;
+}
+ul.pj3-list div.funding-state{padding:15px 0; display: flex; }
+ul.pj3-list div.funding-state em{color: #ff6161;}
+ul.pj3-list span.f-amount{font-size: 20px; font-weight: 300;}
+ul.pj3-list span.percent{color: #ff6161; font-size: 16px; padding: 0 10px; line-height: 2em;}
+ul.pj3-list span.time{margin-left: auto; color: #989898;}
+ul.pj3-list span i.fa-clock{}
+
+
+
+
+
+
+
+
+
