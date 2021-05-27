@@ -60,23 +60,24 @@ console.log(LOAD);
         	            <li>회원가입</li>
             	    </ul>
                 </s:authorize>
-    	            
+				
                  <s:authorize access=" isAuthenticated()">
+				<s:authentication property="principal.username" var="user_id" />
     	            <ul class="login" id="logout">
-        	            <li class="myPage-menu">${requestScope.id }</li>
+        	            <li class="myPage-menu">${user_id }</li>
         	            <li>로그아웃</li>
             	    </ul>
             	    <ul class="hide-user-info">
-	                    <li><a href="#">내정보</a></li>
-	                    <li><a href="#">알림</a></li>
-	                    <li><a href="#">팔로우</a></li>
-	                    <li><a href="#">문의내역</a></li>
-	                    <li><a href="#">후원현황</a></li>
+	                    <li><a href="${pageContext.servletContext.contextPath }/user/info">내정보</a></li>
+	                    <li><a href="${pageContext.servletContext.contextPath }/user/notification/activity">알림</a></li>
+	                    <li><a href="${pageContext.servletContext.contextPath }/user/follow">팔로우</a></li>
+	                    <li><a href="${pageContext.servletContext.contextPath }/user/message">문의내역</a></li>
+	                    <li><a href="${pageContext.servletContext.contextPath }/user/spon/status">후원현황</a></li>
 	                    <li><a href="#">좋아한 프로젝트</a></li>
 	                    <li><a href="#">내가 만든 프로젝트</a></li>
-	                    <li><a href="#">설정</a></li>
+	                    <li><a href="${pageContext.servletContext.contextPath }/user/setting/profile">설정</a></li>
                 	</ul>
-            	    <c:url var="logoutUrl" value="logout"/>
+            	    <c:url var="logoutUrl" value="/logout"/>
             	    <form id="logoutForm" action="${logoutUrl }" method="POST">
             	    	<s:csrfInput/>
             	    </form>
