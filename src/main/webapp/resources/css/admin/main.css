@@ -1,0 +1,105 @@
+
+/* wrapper */
+.wrapper {
+	margin:0 auto;
+	width: 1440px;
+	height: 187px;
+}
+.wrapper .wrapperTop{
+width: 100%;
+height: 187px;
+background: #FFDB0E;
+left: 0px;
+top: 67px;
+}
+
+/* mainTitle */
+.mainTitle {
+padding-left: 200px;
+padding-top: 50px;
+font-size: 20px;
+}
+
+.countWrap {
+position: relative;
+left: 475px;
+top: -121px;
+z-index: 1;
+width: 766px;
+height: 174px;
+
+width: 766px;
+height: 174px;
+background: #FFFFFF;
+box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+}
+.countWrap .row .no{
+width: 10%;
+height: 100%;
+padding-left: 30px;
+padding-top: 30px;
+font-weight: 500;
+font-size: 28px;
+color: #5A5A5A;
+}
+
+.countWrap .row .right{
+	width: 89%;
+	background: blak
+}
+
+
+.totalCount {
+	height:112px;
+	color:#222;
+	font-size:15px;
+	letter-spacing:-1px;
+	text-align:center;
+}
+.totalCount:after {display:table;clear:both;content:"";table-layout:fixed}
+.totalCount li .icon {width:30px; height:30px;padding-top:24px;}
+.totalCount li {float:left;position:relative;width:25%}
+.totalCount li:last-child:after {display:none}
+.totalCount li .title {display:block;padding-top:24px;color:#666;font-size:24px;line-height:32px}
+.totalCount li strong.title {color:black; font-size:25px}
+.totalCount li .count {display:inline-block;color:#222;font-size:16px;letter-spacing:0;line-height:32px}
+
+.listWrap {position: relative;top: -100px;}
+.listWrap .listLeft {float:left;}
+.listWrap .listLeft .projectList {width:708px;padding:36px 48px 20px;box-sizing:border-box}
+.listWrap .listLeft .projectList .title {font-weight:bold;margin:10px;font-size:20px;line-height:26px;color:#000;letter-spacing:-1.5px}
+.listWrap .listLeft .projectList .link {text-align:right}
+.listWrap .listLeft .list {margin-top:-9px}
+.listWrap .listLeft .list li {overflow:hidden;margin-top:10px;padding:10px 0;border-bottom:1px solid #f2f3f4;border:1px solid #e5e6eb;border-radius:12px;}
+.listWrap .listLeft .list li div {margin:10px;}
+.listWrap .listLeft .list .cont_list {position:relative;overflow:hidden}
+.listWrap .listLeft .list li:last-of-type {border-bottom:0}
+.listWrap .listLeft .list .thumb {float:left;overflow:hidden;margin-right:27px;width:128px;height:127px;border-radius:6px;background:lightsteelblue}
+.listWrap .listLeft .list .thumb img {display:block;max-width:128px;max-height:128px}
+.listWrap .listLeft .list .desc_list {overflow:hidden;height:128px}
+.listWrap .listLeft .list .badge {display:inline-block;overflow:hidden;max-width:100%;padding:4px 10px;height:24px;border-radius:4px;box-sizing:border-box;font-weight:bold;font-size:12px;line-height:16px;color:#4c68e2;letter-spacing:-0.5px;text-align:center;background:#f0f3ff;text-overflow:ellipsis;white-space:nowrap}
+.listWrap .listLeft .list .tit {display:block;display:-webkit-box;overflow:hidden;margin:10px 0 20px;height:47px;font-size:16px;line-height:23px;color:#222;letter-spacing:-1px;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.listWrap .listLeft .list .ninckname {display:inline-block;overflow:hidden;height:22px;margin-right:3px;font-size:13px;line-height:22px;color:#666;letter-spacing:-1px;vertical-align:top}
+
+
+
+
+.listWrap .listRight {float:left;margin-left:24px}
+.listWrap .listRight .reposrtList {width:708px;padding:36px 48px 20px;box-sizing:border-box}
+.listWrap .listRight .reposrtList .title {font-weight:bold;margin:10px;font-size:20px;line-height:26px;color:#000;letter-spacing:-1.5px}
+.listWrap .listRight .reposrtList .link {text-align:right}
+.listWrap .listRight .list {margin-top:-9px}
+.listWrap .listRight .list li {overflow:hidden;margin-top:10px;padding:10px 0;border-bottom:1px solid #f2f3f4;border:1px solid #e5e6eb;border-radius:12px;}
+.listWrap .listRight .list .cont_list {position:relative;overflow:hidden}
+.listWrap .listRight .list li:last-of-type {border-bottom:0}
+.listWrap .listRight .list li div {margin:10px;}
+.listWrap .listRight .list .thumb {float:left;overflow:hidden;margin-right:27px;width:128px;height:127px;border-radius:6px;background:lightsteelblue}
+.listWrap .listRight .list .thumb img {display:block;max-width:128px;max-height:128px}
+.listWrap .listRight .list .desc_list {overflow:hidden;height:128px}
+.listWrap .listRight .list .badge {display:inline-block;overflow:hidden;max-width:100%;padding:4px 10px;height:24px;border-radius:4px;box-sizing:border-box;font-weight:bold;font-size:12px;line-height:16px;color:#4c68e2;letter-spacing:-0.5px;text-align:center;background:#f0f3ff;text-overflow:ellipsis;white-space:nowrap}
+.listWrap .listRight .list .tit {display:block;display:-webkit-box;overflow:hidden;margin:10px 0 20px;height:47px;font-size:16px;line-height:23px;color:#222;letter-spacing:-1px;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.listWrap .listRight .list .nickname {display:inline-block;overflow:hidden;height:22px;margin-right:3px;font-size:13px;line-height:22px;color:#666;letter-spacing:-1px;vertical-align:top}
+
+
+
