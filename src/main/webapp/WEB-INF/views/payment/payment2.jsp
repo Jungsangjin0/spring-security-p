@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/reset.css" type="text/css">
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/common/header.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/goodsDetail/goodsDetail.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/payment/payment.css" type="text/css">
 </head>
 <jsp:include page="../common/header.jsp"/>
 <body>
