@@ -1,0 +1,35 @@
+/* contents */
+.m-main{width: 400px; padding:50px 0px 50px; margin: 0 auto; text-align: center;}
+.m-div{}
+div.m-main h1{font-size :24px; line-height: 36px; letter-spacing: -0.025em; text-align: center; margin: 0px 0px 32px; font-weight: bold; padding : 0em; display: block;}
+
+/* form */
+form.m-form{box-sizing: inherit; display: block; margin-top: 0em;}
+.f-div{text-align: left; margin : 0px 0px 23px; word-break: break-all; font-size: 14px; line-height: 1.7em; color: rgba(0, 0, 0, 87);}
+.m-margin{width:auto; margin: 0px 0px 12px; word-break: break-all;}
+div.m-margin span{border: 1px solid rgb(230, 230, 230); color: rgb(13, 13, 13); background: rgb(255, 255, 255); padding: 0px 12px; max-height: 44px; min-width: 100px; display: flex; font-size: 14px; line-height: 24px; letter-spacing: -0.015em; align-items: center; border-radius: 4px;}
+span input{padding:13px 0px; width: 100%; background: transparent; border: 0px; box-sizing: border-box; height: 100%; outline: none; margin: 0px; line-height: normal; color: inherit; font: inherit;}
+
+/* 파일업로드 */
+.filebox{margin: 12px 0px 0px 0px; }
+.filebox input[type="file"]{position: absolute; width: 0; height: 0; padding: 0; overflow: hidden; order: 0;}
+.filebox label{display: inline-block; padding: 3px 5px; color: #999; vertical-align: middle; background-color: #fdfdfd; cursor: pointer; border: 1px solid #ebebeb; border-radius: 6px;}
+.filebox .upload-name{display: inline-block; height: 28px; font-size:13px; padding: 0 10px; vertical-align: middle; background-color: #f5f5f5; border: 1px solid #ebebeb; border-radius: 8px; color: #999;}
+.filebox .upload-name2{display: inline-block; height: 28px; font-size:13px; padding: 0 10px; vertical-align: middle; background-color: #f5f5f5; border: 1px solid #ebebeb; border-radius: 8px; color: #999;}
+
+/* 우편검색버튼 */
+.z-btn{width:80px; cursor:pointer; display: inline-block; height: 28px; font-size:13px; padding: 0 10px; vertical-align: middle; background-color: #fdfdfd; border: 1px solid #ebebeb; border-radius: 8px; color: #999;}
+
+/* 약관 */
+div.terms {margin:0px 0px 32px; width: auto; text-align: left; word-break: break-all;}
+.line{border-bottom: 1px solid rgb(230, 230, 230); padding-bottom: 10px;}
+.all{font-weight: bold; cursor: pointer; position: relative; overflow: hidden; color: rgb(61, 61, 61);}
+div.terms ul{}
+div.terms ul li{margin-top:10px;}
+div.terms ul li label{cursor: pointer;}
+input[type="checkbox"]{z-index: 1; margin-inline: 10px;}
+.link{float: right; font-size: 11px; line-height: 20px; letter-spacing: -0.015em; outline: 0px; background: transparent; border: 0px; padding: 0px; cursor: pointer; color: rgb(39, 163, 255); font-weight: normal; text-decoration: underline;}
+
+
+/* 신청 버튼 */
+.j-btn{font-size:16px; line-height: 27px; letter-spacing: -0.02em; width: 100%; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; height: 52px; white-space: nowrap; border-radius: 4px; outline: none; font-weight: bold; box-sizing: border-box; padding: 0px 24px; background-color: rgb(255, 87, 87); color: rgb(255, 255, 255);}
