@@ -13,7 +13,8 @@
 	    
 	<div id="wrap">
 		<jsp:include page="../../common/header.jsp"></jsp:include>
-		
+		<!-- h2아래인가...줄 -->
+		<div class="full-border"></div>
 	    <section>
 	        <article class="page-title">
 	            <h2>좋아한 프로젝트</h2>
