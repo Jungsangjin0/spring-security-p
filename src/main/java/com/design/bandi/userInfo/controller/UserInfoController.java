@@ -92,4 +92,17 @@ public class UserInfoController {
 		return "userInfo/settings/account";
 	}
 	
+	
+	@RequestMapping(value="user/likeproject")
+	public String likeProject() {
+		
+		return "userInfo/likeProject/likeProject";
+	}
+	
+	@RequestMapping(value="user/madeproject")
+	public String madeProject() {
+		
+		return "userInfo/madeProject/madeProject";
+	}
+	
 }

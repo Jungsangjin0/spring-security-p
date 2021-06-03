@@ -69,12 +69,11 @@ console.log(LOAD);
             	    </ul>
             	    <ul class="hide-user-info">
 	                    <li><a href="${pageContext.servletContext.contextPath }/user/info">내정보</a></li>
-	                    <li><a href="${pageContext.servletContext.contextPath }/user/notification/activity">알림</a></li>
 	                    <li><a href="${pageContext.servletContext.contextPath }/user/follow">팔로우</a></li>
 	                    <li><a href="${pageContext.servletContext.contextPath }/user/message">문의내역</a></li>
 	                    <li><a href="${pageContext.servletContext.contextPath }/user/spon/status">후원현황</a></li>
-	                    <li><a href="#">좋아한 프로젝트</a></li>
-	                    <li><a href="#">내가 만든 프로젝트</a></li>
+	                    <li><a href="${pageContext.servletContext.contextPath }/user/likeproject">좋아한 프로젝트</a></li>
+	                    <li><a href="${pageContext.servletContext.contextPath }/user/madeproject">내가 만든 프로젝트</a></li>
 	                    <li><a href="${pageContext.servletContext.contextPath }/user/setting/profile">설정</a></li>
                 	</ul>
             	    <c:url var="logoutUrl" value="/logout"/>
