@@ -16,7 +16,7 @@ public class HelpController {
 	public String main(HttpServletRequest request, String error) {
 		
 		System.out.println("test");
-		
+		System.out.println("test merge");
 		
 		return "help/index";
 	}
