@@ -127,7 +127,7 @@
 		<property name="customObjectDao" ref="customObjectDao"/>
 	</bean>
 	<bean id="customObjectDao" class="com.design.bandi.securityLogin.model.dao.CustomObjectDao">
-		<property name="sqlSession" ref="sqlSession"/>
+		<property name="sqlSession" ref="sqlSessionTemplate"/>
 	</bean>
 	<bean id="requestMap" class="com.design.bandi.securityLogin.bean.UrlResourceMapFactoryBean" init-method="init">
 		<property name="securedObjectService" ref="securedObjectService"/>
