@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>잘못된 접근</h1>
-	<a class="denied">메인페이지로 돌아가기</a>
+	<a class="denied" href="#">메인페이지로 돌아가기</a>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">

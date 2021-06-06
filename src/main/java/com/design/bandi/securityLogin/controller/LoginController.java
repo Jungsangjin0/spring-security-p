@@ -74,4 +74,14 @@ public class LoginController {
 		return "login/join";
 	}
 	
+	/*
+	 * denied method
+	 * @return
+	 * */
+	@RequestMapping(value="/denied", method=RequestMethod.GET)
+	public String denied() {
+		
+		return "error/denied";
+	}
+	
 }
