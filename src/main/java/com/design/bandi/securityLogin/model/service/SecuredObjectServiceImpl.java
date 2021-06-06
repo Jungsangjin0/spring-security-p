@@ -15,7 +15,6 @@ public class SecuredObjectServiceImpl implements SecuredObjectService{
 	private CustomObjectDao customObjectDao;
 	
 	
-	
 	public CustomObjectDao getCustomObjectDao() {
 		return customObjectDao;
 	}
@@ -32,17 +31,11 @@ public class SecuredObjectServiceImpl implements SecuredObjectService{
 	public LinkedHashMap<RequestMatcher, List<ConfigAttribute>> getRoleAndUrl() {
 		
 		LinkedHashMap<RequestMatcher, List<ConfigAttribute>> ret = new LinkedHashMap<RequestMatcher, List<ConfigAttribute>>();
-		System.out.println("=============================");
-		System.out.println("servieImpl customObejctDao ��");
-		System.out.println("============================");
 		LinkedHashMap<Object, List<ConfigAttribute>> data = customObjectDao.getRolesAndUrl();
-		System.out.println("securedServiceImpe");
 		Set<Object> keys = data.keySet();
 		for(Object key : keys) {
 			ret.put((AntPathRequestMatcher)key, data.get(key));
 		}
-		System.out.println("========servurServiceImp");
-		System.out.println("ret : " + ret);
 		return ret;
 	}
 

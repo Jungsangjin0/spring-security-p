@@ -7,25 +7,25 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-
+<context:component-scan base-package="com.design.bandi"/>
 <s:http pattern="/resources/**" security="none"/>
 <s:http auto-config="true" use-expressions="true">
 
 
-	<!-- <s:custom-filter ref="filterSecurityInterceptor" after="EXCEPTION_TRANSLATION_FILTER"/> -->		
+	<s:custom-filter ref="filterSecurityInterceptor" after="EXCEPTION_TRANSLATION_FILTER"/>	
 	<!-- <s:csrf disabled="true"/>  -->
-	<!-- <s:anonymous granted-authority="Anonymous"/> -->
+	<s:anonymous granted-authority="Anonymous"/>
 		
-	<s:intercept-url pattern="/login" access="isAnonymous()" />
+<!-- 	<s:intercept-url pattern="/login" access="isAnonymous()" />
 	<s:intercept-url pattern="/register" access="isAnonymous()" />
-	<s:intercept-url pattern="/join" access="isAnonymous()" />
+	<s:intercept-url pattern="/join" access="isAnonymous()" /> -->
 		
 	<!-- 정적 리소스는 모두 접근 허용 -->
 	<!-- 로그인된 상태에서는 로그인이나 회원가입 화면에 접근 못하도록 함 -->
 	<!-- 관리자페이지는 관리자만 접근 허용 -->
-	<s:intercept-url pattern="/admin/**" access="hasRole('ADMIN')" />
+	<!-- <s:intercept-url pattern="/admin/**" access="hasRole('ADMIN')" />
 	<s:intercept-url pattern="/creator/**" access="hasAnyRole('ADMIN', 'CREATOR')" />
-	<s:intercept-url pattern="/user/**" access="hasAnyRole('ADMIN', 'CREATOR', 'USER')" />
+	<s:intercept-url pattern="/user/**" access="hasAnyRole('ADMIN', 'CREATOR', 'USER')" /> -->
 		
 		
 	<!-- 로그인 설정 -->
@@ -34,12 +34,12 @@
 		password-parameter="userPw"
 		login-processing-url="/login_check" 
 		login-page="/login" 
-		default-target-url="/"
-		authentication-failure-url="/login?error=true"
+		authentication-success-handler-ref="customAuthenticationSuccessHandler"
+		authentication-failure-handler-ref="customAuthenticationFailureHandler"
 		
 		/>
-<!-- 		authentication-success-handler-ref="customAuthenticationSuccessHandler"
-		authentication-failure-handler-ref="customAuthenticationFailureHandler" -->
+<!-- 		default-target-url="/"
+		authentication-failure-url="/login?error=true" -->
 			
 	<!-- 로그아웃 설정 -->
 	<s:logout 
@@ -55,7 +55,7 @@
 
 
 	<!-- DB 연동 설정  기본 service 아이디 주기-->
-	<s:authentication-manager>
+<!-- 	<s:authentication-manager>
 		<s:authentication-provider>
 			<s:user-service>
 				<s:user name="admin" password="{noop}1234" authorities="ROLE_ADMIN"/>
@@ -63,50 +63,50 @@
 				<s:user name="creator" password="{noop}1234" authorities="ROLE_CREATOR"/>
 			</s:user-service>
 		</s:authentication-provider>
-	</s:authentication-manager> 
+	</s:authentication-manager>  -->
 	
-	<!-- <s:authentication-manager>
+	<s:authentication-manager>
 		<s:authentication-provider ref="userloginAuthenticationProvider">
 		</s:authentication-provider>
 	</s:authentication-manager>
-	 -->
-	<!-- 비밀번호 encoder -->
-	<bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
-	
+
 	<!-- security provider -->
-	<!-- <bean id="userloginAuthenticationProvider" class="com.design.bandi.securityLogin.model.provider.UserLoginAuthenticationProvider">
+	<bean id="userloginAuthenticationProvider" class="com.design.bandi.securityLogin.model.provider.UserLoginAuthenticationProvider">
 		<property name="encoder" ref="passwordEncoder"/>
 		<property name="userDetailsService" ref="userLoginService"/>
-	</bean> -->
+	</bean>
 	
 	<!-- security UserDetailsService -->
-	<!-- <bean id="userLoginService" class="com.design.bandi.securityLogin.model.service.UserLoginService"/>
-	 -->
+	<bean id="userLoginService" class="com.design.bandi.securityLogin.model.service.UserLoginService">
+		<property name="sqlSession" ref="sqlSessionTemplate"/>
+		<property name="dao" ref="loginDao"></property>
+	</bean>
+	
 	<!-- AuthenticationSuccessHandler -->
-	<!-- <bean id="customAuthenticationSuccessHandler" class="com.design.bandi.securityLogin.handler.CustomAuthenticationSuccessHandler">
+	<bean id="customAuthenticationSuccessHandler" class="com.design.bandi.securityLogin.handler.CustomAuthenticationSuccessHandler">
 		<property name="defaultUrl" value="/"/>
 		<property name="prePage" value="/"/>
 		<property name="useReferer" value="true"/>
-	</bean> -->
+	</bean>
 	
 	<!-- AuthenticationFailureHandler -->
-	<!-- <bean id="customAuthenticationFailureHandler" class="com.design.bandi.securityLogin.handler.CustomAuthenticationFailureHandler">
+	<bean id="customAuthenticationFailureHandler" class="com.design.bandi.securityLogin.handler.CustomAuthenticationFailureHandler">
 		<property name="loginidname" value="userId"/>
 		<property name="loginpasswdname" value="userPw"/>
 		<property name="loginredirectname" value="loginRedirect"/>
 		<property name="exceptionmsgname" value="securityEx"/>
 		<property name="defaultFailureUrl" value="/login"/>
-	</bean> -->
+	</bean>
 	
 	<!-- interceptor filter -->
-	<!-- <bean id="filterSecurityInterceptor" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
+	<bean id="filterSecurityInterceptor" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
 		<property name="authenticationManager" ref="org.springframework.security.authenticationManager"/>
 		<property name="accessDecisionManager" ref="accessDecisionManager"/>
 		<property name="securityMetadataSource" ref="reloadableFilterInvocationSecurityMetadataSource"/>	
-	</bean> -->
+	</bean>
 	
 	<!-- accessDecisionManager -->
-	<!-- <bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+	<bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
 		<constructor-arg>
 			<list>
 				<bean class="org.springframework.security.access.vote.RoleVoter">
@@ -116,10 +116,10 @@
 			</list>
 		</constructor-arg>
 		<property name="allowIfAllAbstainDecisions" value="false"></property>
-	</bean> -->
+	</bean>
 	
 	<!-- requestMap 설정 -->
-	<!-- <bean id="reloadableFilterInvocationSecurityMetadataSource" class="com.design.bandi.securityLogin.datasource.ReloadableFilterInvocationSecurityMetadataSource">
+	<bean id="reloadableFilterInvocationSecurityMetadataSource" class="com.design.bandi.securityLogin.datasource.ReloadableFilterInvocationSecurityMetadataSource">
 		<constructor-arg ref="requestMap"/>
 		<property name="securedObjectService" ref="securedObjectService"/>
 	</bean>
@@ -131,6 +131,6 @@
 	</bean>
 	<bean id="requestMap" class="com.design.bandi.securityLogin.bean.UrlResourceMapFactoryBean" init-method="init">
 		<property name="securedObjectService" ref="securedObjectService"/>
-	</bean> -->
+	</bean>
 	
 </beans>

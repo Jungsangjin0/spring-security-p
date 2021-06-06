@@ -80,11 +80,6 @@ public class CustomAuthenticationFailureHandler implements AuthenticationFailure
 		request.setAttribute(loginidname, loginId);
 		request.setAttribute(loginpasswdname, loginPwd);
 		request.setAttribute(loginredirectname, loginRedirect);
-		System.out.println("=============failure==================");
-		System.out.println(loginId);
-		System.out.println(loginPwd);
-		System.out.println(loginRedirect);
-		System.out.println("===========================");
 		if (exception instanceof AuthenticationServiceException || exception instanceof UsernameNotFoundException) { //null값 리턴
 			request.setAttribute("loginFailMsg", "존재하지 않는 사용자입니다.");
 		
@@ -95,8 +90,6 @@ public class CustomAuthenticationFailureHandler implements AuthenticationFailure
 		}
 		
 
-		System.out.println("failure forward 전");
-		System.out.println("default : " + defaultFailureUrl);
 		
 		request.getRequestDispatcher(defaultFailureUrl).forward(request, response);
 	}

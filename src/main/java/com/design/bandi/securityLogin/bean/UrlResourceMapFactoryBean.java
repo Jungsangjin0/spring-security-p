@@ -17,7 +17,6 @@ import com.design.bandi.securityLogin.model.service.SecuredObjectService;
 public class UrlResourceMapFactoryBean implements FactoryBean<LinkedHashMap<RequestMatcher, List<ConfigAttribute>>>{
 
 	private SecuredObjectService securedObjectService;
-
 	private LinkedHashMap<RequestMatcher, List<ConfigAttribute>> requestMap;
 
 	//bean 생성시 주입하기 위해 setter
@@ -27,11 +26,7 @@ public class UrlResourceMapFactoryBean implements FactoryBean<LinkedHashMap<Requ
 
 	//처음 객체 생성시 init 메소드 실행으로 requestMap 주입
 	public void init() {
-		System.out.println("==========================");
-		System.out.println("urlbfactorybean init 메소드");
-		System.out.println("=======================");
 		requestMap = securedObjectService.getRoleAndUrl();
-		System.out.println("requestMap in init : " + requestMap);
 	}
 
 	@Override
@@ -39,10 +34,7 @@ public class UrlResourceMapFactoryBean implements FactoryBean<LinkedHashMap<Requ
 
 		if(requestMap == null) {
 			requestMap = securedObjectService.getRoleAndUrl();
-			System.out.println("requestMap 메소드 : " + requestMap);
 		}
-		System.out.println("return 전 =============");
-		System.out.println("requestMap : " + requestMap);
 		return requestMap;
 	}
 

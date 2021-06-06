@@ -12,8 +12,8 @@ import com.design.bandi.securityLogin.model.vo.UserInfoVO;
 
 public class UserLoginAuthenticationProvider implements AuthenticationProvider{
 
-	private UserDetailsService userDetailsService;
 	
+	private UserDetailsService userDetailsService;
 	//Bcrypt
 	private PasswordEncoder encoder;
 	
@@ -21,7 +21,6 @@ public class UserLoginAuthenticationProvider implements AuthenticationProvider{
 	public UserLoginAuthenticationProvider() {}
 
 	public UserLoginAuthenticationProvider(UserDetailsService userDetailsService, PasswordEncoder encoder) {
-		super();
 		this.userDetailsService = userDetailsService;
 		this.encoder = encoder;
 	}
@@ -59,7 +58,6 @@ public class UserLoginAuthenticationProvider implements AuthenticationProvider{
 		//입력한정보
 		String userId = authentication.getName();
 		String userPw = (String) authentication.getCredentials();
-		
 		UserInfoVO userInfo = (UserInfoVO) userDetailsService.loadUserByUsername(userId);
 		
 		/*

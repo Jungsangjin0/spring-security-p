@@ -46,56 +46,44 @@ public class CustomObjectDao {
 		
 		boolean isResourcesUrl = true;
 		
-		//쿼리문 실행 후 결과 list 저장
-//		List<Map<String, Object>> resultList = this.namedParameterJdbcTemplate.queryForList(sqlRoleAndResources, new HashMap<String, String>());
-		System.out.println("=======================");
-		System.out.println("여기서 오류발생?");
-		System.out.println("=======================");
-		List<Map<String, Object>> resultList =sqlSession.selectList("dao.authList");
-		System.out.println("=======================");
-		System.out.println("이다음으로 너어와?");
-		System.out.println("resultList : " + resultList);
-		System.out.println("=======================");
+		//쿼리문 실행 후 전체 Resource list 저장
+		List<Map<String, Object>> resultList =sqlSession.selectList("resource.resourceList");
 		Iterator<Map<String, Object>> itr = resultList.iterator();
-		System.out.println("===============");
-		System.out.println("itr : " + itr);
-		System.out.println("====================");
 		Map<String, Object> tempMap;
 		String preResource = null;
 		String presentResourceStr;
 		Object presentResource;
-		System.out.println("=======================");
-		System.out.println("while문 전입니다");
-		System.out.println("=======================");
+		//하나 씩 비교
 		while(itr.hasNext()) {
 			
 			tempMap = itr.next();
 			
-			presentResourceStr = (String)tempMap.get("URL_T");
-			
-			//오류발생지점
+			//List map에 저장되어있는 URL Resource get URL :: ex)/admin/** 
+			presentResourceStr = (String)tempMap.get("URL");
+			//AntPathRequestMatcher로 저장 :: key값 /admin/**
 			presentResource = new AntPathRequestMatcher(presentResourceStr);
-			
+			//최종 resourcesMap의 value값으로 저장할 값 :: value값
 			List<ConfigAttribute> configList = new LinkedList<ConfigAttribute>();
+			
 			//중복 처리 //그 전 resource가 현재 presentResourceStr 과 같다면 
 			if(preResource != null && presentResourceStr.equals(preResource)) {
-				//그전 auth List
+				//현재(presentResource)를 key값으로 최종 resoyurcesMap에서 key값으로 사용하여 value 값 얻어와 preAuthList에 저장
 				List<ConfigAttribute> preAuthList = resourcesMap.get(presentResource);
-				
+				//list 값 interator :: 위(preAuthList) Iterator 
 				Iterator<ConfigAttribute> preAuthItr = preAuthList.iterator();
+				//Iterator 값 있을 동안
 				while(preAuthItr.hasNext()) {
+					//iterator를 configList(최종 resourcesMap에 저장)에 저장
 					SecurityConfig tempConfig = (SecurityConfig)preAuthItr.next();
 					configList.add(tempConfig);
 				}
 			}
 			
-			configList.add(new SecurityConfig((String) tempMap.get("URL_AU")));
+			configList.add(new SecurityConfig((String) tempMap.get("AUTH")));
 			resourcesMap.put(presentResource, configList);
 			preResource = presentResourceStr;
 		}
-		System.out.println("====================");
-		System.out.println("return 전입니다");
-		System.out.println("====================");
+		/*while문 끝*/
 		return resourcesMap;
 	}
 	

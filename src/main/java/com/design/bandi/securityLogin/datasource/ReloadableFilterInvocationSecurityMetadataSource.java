@@ -19,10 +19,8 @@ import org.springframework.security.web.util.matcher.RequestMatcher;
 import com.design.bandi.securityLogin.model.service.SecuredObjectService;
 
 public class ReloadableFilterInvocationSecurityMetadataSource implements FilterInvocationSecurityMetadataSource{
-
 	
 	private final Map<RequestMatcher, Collection<ConfigAttribute>> requestMap;
-	
 	private SecuredObjectService securedObjectService;
 	
 	public ReloadableFilterInvocationSecurityMetadataSource(LinkedHashMap<RequestMatcher, Collection<ConfigAttribute>> requestMap) {

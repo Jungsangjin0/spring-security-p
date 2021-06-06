@@ -20,15 +20,10 @@ import org.springframework.util.StringUtils;
 public class CustomAuthenticationSuccessHandler implements AuthenticationSuccessHandler{
 
 	private RequestCache requestCache = new HttpSessionRequestCache();
-	
 	private String targetUrlParameter;
-
 	private String defaultUrl;
-
 	private boolean useReferer;
-
 	private String prePage;
-
 	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 	
 	public CustomAuthenticationSuccessHandler() {
@@ -165,9 +160,6 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
 	 * */
 	private void useRefererUrl(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		System.out.println("===================useRefererUrl");
-		System.out.println("target : " + prePage);
-		System.out.println("==============================");
 		redirectStrategy.sendRedirect(request, response, prePage);
 		
 	}
@@ -178,9 +170,6 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
 	 * @param response
 	 * */
 	private void useDefaultUrl(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		System.out.println("===================useRefererUrl");
-		System.out.println("target : " + defaultUrl);
-		System.out.println("==============================");
 		redirectStrategy.sendRedirect(request, response, defaultUrl);
 		
 	}
