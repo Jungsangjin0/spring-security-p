@@ -5,8 +5,6 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/reset.css" type="text/css">
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/resources/css/main.css" type="text/css">
     <title>로그인</title>
     <meta charset="UTF-8">
@@ -54,7 +52,7 @@
             </div>
             <div style="overflow: hidden; text-align: center; padding: 20px 0px; position: relative; box-sizing: inherit; line-height: 1.7em; color: rgba(0, 0, 0, 87);"></div>
             <span style="font-size: 13px; line-height: 20px; letter-spacing: -0.015em; cursor: pointer; font-weight: normal;" title="비밀번호를 잊으셨나요?">
-                <a href="#" style="color :  rgb(39, 163, 255); text-decoration: underline;">비밀번호를 잊으셨나요?</a>
+                <a href="password" style="color :  rgb(39, 163, 255); text-decoration: underline;">비밀번호를 잊으셨나요?</a>
             </span>
         </div>
     </div>

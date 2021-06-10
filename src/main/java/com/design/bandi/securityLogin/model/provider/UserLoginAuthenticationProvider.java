@@ -17,15 +17,12 @@ public class UserLoginAuthenticationProvider implements AuthenticationProvider{
 	//Bcrypt
 	private PasswordEncoder encoder;
 	
-	
 	public UserLoginAuthenticationProvider() {}
 
 	public UserLoginAuthenticationProvider(UserDetailsService userDetailsService, PasswordEncoder encoder) {
 		this.userDetailsService = userDetailsService;
 		this.encoder = encoder;
 	}
-	
-	
 
 	public UserDetailsService getUserDetailsService() {
 		
@@ -78,7 +75,6 @@ public class UserLoginAuthenticationProvider implements AuthenticationProvider{
 		//다시만드는이유는 ayuthentication에 setter메소드가없다.
 		//authentication 구현체 UsernamePassworAuthenticationtoken을 생성자로 만들때는
 		//id를 String으로 전달하기 보다는 userDetails 객체를 넘기는것이 좋다
-		//동작 안할때가 있기 때문이다.
 		//아이디 비밀번호(null) 권한
 		Authentication newAuth = new UsernamePasswordAuthenticationToken(
 				userInfo, null, userInfo.getAuthorities());

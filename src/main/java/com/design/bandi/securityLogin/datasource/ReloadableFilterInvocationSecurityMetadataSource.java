@@ -38,7 +38,7 @@ public class ReloadableFilterInvocationSecurityMetadataSource implements FilterI
 		Collection<ConfigAttribute> result = null;
 		for(Map.Entry<RequestMatcher, Collection<ConfigAttribute>> entry : requestMap.entrySet()) {
 			if(entry.getKey().matches(request)) {
-				result =entry.getValue();
+				result = entry.getValue();
 				break;
 			}
 		}

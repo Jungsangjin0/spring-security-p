@@ -14,32 +14,29 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class CustomObjectDao {
 
 	private String sqlRoleAndUrl;
-	
 	private SqlSessionTemplate sqlSession;
-	
-	
-	
 	
 	public String getSqlRoleAndUrl() {
 		return sqlRoleAndUrl;
 	}
 
-
 	public void setSqlRoleAndUrl(String sqlRoleAndUrl) {
 		this.sqlRoleAndUrl = sqlRoleAndUrl;
 	}
-
 
 	public SqlSessionTemplate getSqlSession() {
 		return sqlSession;
 	}
 
-
 	public void setSqlSession(SqlSessionTemplate sqlSession) {
 		this.sqlSession = sqlSession;
 	}
 
-
+	/*
+	 * db에 저장되어 있는 resource 데이터를 읽어와 url : Role 관련 설정 method
+	 * @param String
+	 * return LinkedHashMap<>
+	 * */
 	public LinkedHashMap<Object, List<ConfigAttribute>> getRolesAndResources(String resourceType) {
 		
 		LinkedHashMap<Object, List<ConfigAttribute>> resourcesMap = new LinkedHashMap<Object, List<ConfigAttribute>>();
@@ -60,17 +57,22 @@ public class CustomObjectDao {
 			
 			//List map에 저장되어있는 URL Resource get URL :: ex)/admin/** 
 			presentResourceStr = (String)tempMap.get("URL");
+			
 			//AntPathRequestMatcher로 저장 :: key값 /admin/**
 			presentResource = new AntPathRequestMatcher(presentResourceStr);
+			
 			//최종 resourcesMap의 value값으로 저장할 값 :: value값
 			List<ConfigAttribute> configList = new LinkedList<ConfigAttribute>();
 			
 			//중복 처리 //그 전 resource가 현재 presentResourceStr 과 같다면 
 			if(preResource != null && presentResourceStr.equals(preResource)) {
+				
 				//현재(presentResource)를 key값으로 최종 resoyurcesMap에서 key값으로 사용하여 value 값 얻어와 preAuthList에 저장
 				List<ConfigAttribute> preAuthList = resourcesMap.get(presentResource);
+				
 				//list 값 interator :: 위(preAuthList) Iterator 
 				Iterator<ConfigAttribute> preAuthItr = preAuthList.iterator();
+				
 				//Iterator 값 있을 동안
 				while(preAuthItr.hasNext()) {
 					//iterator를 configList(최종 resourcesMap에 저장)에 저장

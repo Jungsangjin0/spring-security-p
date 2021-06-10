@@ -84,4 +84,14 @@ public class LoginController {
 		return "error/denied";
 	}
 	
+	/*
+	 * 비밀번호찾기 method
+	 * @return
+	 * */
+	@RequestMapping(value="/password", method=RequestMethod.GET)
+	public String forgotPassword() {
+		
+		return "/login/forgot-password";
+	}
+	
 }

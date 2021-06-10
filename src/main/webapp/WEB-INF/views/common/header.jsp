@@ -4,9 +4,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<c:set value="${pageContext.servletContext.contextPath}" var="load" scope="page"/>
 <script type="text/javascript">
-const LOAD = "${pageContext.servletContext.contextPath }";
-console.log(LOAD);
+const LOAD = "${load}";
 </script>
 <script src="${pageContext.servletContext.contextPath }/resources/js/login.js?ver=1"></script>
 <script src="${pageContext.servletContext.contextPath }/resources/js/header.js"></script>

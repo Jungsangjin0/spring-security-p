@@ -43,6 +43,7 @@ public class EncodePassword {
 		log.info("encode : {}", encode);
 		log.info("ds : {}", ds);
 	}
+	
 	@Before
 	public void 멤버수조회() {
 		String query = "select mem_no from tbl_member";
@@ -100,4 +101,5 @@ public class EncodePassword {
 			}
 		}
 	}
+	
 }
