@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+section{width: 1030px; margin:auto;}    
+article h3 { width : 74%; display:inline-block;  }
+
+.userlistsearch { display: inline-block;}
+.usersearch{ border-radius: 5px; height: 25px; text-align: center;}
+
+.ta{text-align: center; border-collapse: collapse;}
+.ta th{border-bottom: 2px solid red; padding: 8px 0px 8px 0px; font-size: 15px;}
+.ta td{border-bottom: 1px solid #EAEAEA; padding: 8px 0px 8px 0px; font-size: 12px;}
+
+ .w50{width:50px;}
+.w100{width:100px;}
+.w150{width:150px;}
+.w175{width:175px;}
+.w205{width:205px;}
+.w280{width:280px;}
+        
+.ub{background-color: #F7EAFF; border-radius: 5px; border-color: #F7EAFF; color: #C99EE3;}
+.mb{background-color: #E7EFFC; border-radius: 5px; border-color: #E7EFFC; color: #6271FB;}
+.sb{background-color: white; border-radius: 5px; border-color: #FFDB0E; width: 80px;}
+.ab{background-color: white; border-radius: 5px; border-color: #16AA48; width: 80px;}
+.db{background-color: white; border-radius: 5px; border-color: #FF0202; width: 80px;}
+
+ /* 페이징 */
+.pager{margin: 500px 0px 10px 0px;}
+.pb{background-color: white; border: none; color: #989898; font-weight: bold;}
+.pc1{background-color:#FF7575; color: white}
+
+/* 모달 */        
+.modal{ 
+  position:absolute; width:100%; height:100%; background: rgba(0,0,0,0.8); top:0; left:0; display:none;
+}
+
+.modal_content{
+  width:400px; height:200px;
+  background:#fff; border-radius:10px;
+  position:relative; top:50%; left:50%;
+  margin-top:-100px; margin-left:-200px;
+  text-align:center;
+  box-sizing:border-box; padding:74px 0;
+  line-height:23px; cursor:pointer;
+}
+
+.popta{text-align: center; border-collapse: collapse;}
+.popta td{border-bottom: 1px solid #EAEAEA; padding: 10px 0px 3px 0px; font-size: 12px;}
