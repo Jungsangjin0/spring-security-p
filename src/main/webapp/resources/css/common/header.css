@@ -7,13 +7,13 @@
     position: relative;
     top: 67px;
 }
-header{ width: 1032px; height: 67px; margin: 0 auto; display: flex;  overflow: hidden; align-items:center;}
+header{ width: 1032px; height: 67px; margin: 0 auto; display: flex;  /* overflow: hidden; */ align-items:center;}
 header h1 {display: inline-block; }
 header h1 > img{width: 50px; }
 header nav{ display: inline-block; width: 400px; line-height: 67px; font-size:16px; font-weight: 500;}
 header nav ul{width: 400px; overflow: hidden; text-align: center;}
 header nav ul li{width:33.3%; float: left;}
-header>div{display: inline-flex; line-height: 67px; margin-left: auto;}
+header>div{display: inline-flex; line-height: 67px; margin-left: auto; position:relative;}
 header>div>i.fa-search{cursor: pointer; line-height: 67px;width: 40px;text-align: center;font-size: 1.2rem;color: #686868;}
 header div.search-div{
     position: absolute;
@@ -73,9 +73,9 @@ header>div ul.login li{cursor: pointer; padding: 0 10px;}
 
 .hide-user-info{
     width: 173px;
-    position: fixed;
+    position: absolute;
     top: 67px;
-    right:118px;
+    left:199px;
     line-height: 40px;
     background: #fff;
     padding: 20px;
